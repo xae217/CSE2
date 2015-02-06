@@ -1,7 +1,7 @@
 // Xavier Escobar
 // January 30th, 2015
 // CSE002
-// Cyclometer will input time and number of rotations and will output:
+// Cyclometer.java will input time and number of rotations and will output:
 //      number of minutes for each trip
 //      number of counts for each trip
 //      distance of each trip in miles
@@ -17,7 +17,7 @@ public class Cyclometer{
 	
 	// useful constants
 	double wheelDiameter=27.0; //diameter of the wheel in inches
-	double PI=3.14159; // nonstant Pi
+	double PI=3.14159; // constant Pi
 	double feetPerMile=5280.0; // number of feet in a mile
 	double inchesPerFoot=12.0; // number of inches in a foot
 	double secondsPerMinute=60.0; // number of seconds in a minute
