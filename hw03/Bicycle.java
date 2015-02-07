@@ -29,7 +29,12 @@ public class Bicycle {
         //calculates total distance traveled
         double totalDistance = (nCounts*wheelDiameter*PI);
         //converts from inches to miles and stores in the same variable
-        totalDistance/ = inchesPerFoot*feetPerMile;
+        totalDistance /= inchesPerFoot*feetPerMile;
+        //cut to two decimal places
+        totalDistance *= 100;//multiplies by 100 to store 2 decimal places before casting
+        totalDistance = (int) totalDistance;//casts into an intiger eliminating other decimals
+        totalDistance /= 100;//divides by 100 creating two decimal places
+        
         //calculates total travel time
         double totalTime = nSeconds/secondsPerMinute;//transforms seconds into minutes
         //caluclates average mph
@@ -38,7 +43,7 @@ public class Bicycle {
         //print the results
         System.out.println("The distance was " + totalDistance + 
             " miles and took " + totalTime + " minutes.");
-        System.out.println("The average mph was " + averageMPH + ".");
+        System.out.println("The average mph was " + averageMPH);
         
         }//main method ends
     }//class ends
