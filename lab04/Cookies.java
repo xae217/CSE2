@@ -55,7 +55,7 @@ public class Cookies {
         //checks for correct input (int > 0) using same method as above
         if (myScanner.hasNextInt()) {
              cookiesPP = myScanner.nextInt();
-             if (cookiesPP<0){ 
+             if (cookiesPP < 0){ 
                 System.out.println("You did not enter and int > 0");
                 return;
             }//nested if statement ends
@@ -78,7 +78,7 @@ public class Cookies {
                 " and the amount will divide evenly.");
         }
         //checks if there are enough cookies and if they aren't evenly divisible
-        else if ((nCookies/nPeople) > cookiesPP && nCookies%nPeople > 0) {
+        else if ((nCookies%nPeople) > 0) {
             //prints the results
             System.out.println("You have enough, but they will not" +
                 " divide evenly.");
