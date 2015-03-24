@@ -14,7 +14,9 @@ public class RunFactorial {
         System.out.println("Please enter an integer that is between 9 and 16:");
         //declare variables to use in and outside the for loop
         long factorial = 1; 
-        int x = 1; i = 0; input = 0;
+        int x = 1; 
+        int i = 0; 
+        int input = 0;
         do {
             //this will only run once the input is validated
             if ( i > 0) { 
