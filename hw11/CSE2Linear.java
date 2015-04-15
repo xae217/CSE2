@@ -70,7 +70,7 @@ public class CSE2Linear{
             }
             //if user does not enter an int then print error message
             else {
-                myScanner.nextInt();
+                myScanner.next();
                 System.out.println("You did not enter an integer.");
                 i--;//set i back one iteration
             }
@@ -137,6 +137,7 @@ public class CSE2Linear{
             //generates a random number and stores it in a variable
             //the random numbers range from [0,14]
             int randIndex = rand.nextInt(list.length);
+           
             //create boolean variable that will serve as a trigger
             boolean trigger = true;
             //for the first iteration...
@@ -157,14 +158,15 @@ public class CSE2Linear{
                 //   position in the array then:
                 else {
                     //set trigger to true
+                    
                     trigger = true;
                 }
             }//end nested for loop
+
             //if randIndex is free to be asigned then:
             if (trigger) {
+                //fills array with indexes in random order
                 scrambledList[i] = randIndex;
-                //set the position of the array at randIndex = value of list at i
-                scrambledList[scrambledList[i]] = list[i];
             }
             //if randIndex is not free to be asigned then:
             else {
@@ -172,21 +174,28 @@ public class CSE2Linear{
                 i--;
             }
         }//end for loop
-        return scrambledList;//return the new scrambled list
+        //create a new list to get the scrambled values
+        int [] list2 = new int[list.length];
+        for( int i = 0; i < list.length; i++) {
+            list2[scrambledList[i]] = list[i];
+        }
+        return list2;//return the new list
     }//end scramble class
     
+    //create linear search method
     public static void linearSearch(int[] list, int target) {
         int i = 0;
         for (i = 0; i < list.length; i++) {
+            //if target is found then:
             if (list[i] == target) {
+                //print message and number of iterations
                 System.out.println(target + " was found with " + (i+1) +
                     " iterations." );
-                return;
+                return;//exit method
             }
-            
         }
+        //if target was not found print message and number of iterations
         System.out.println(target + " was not found with " + i +
                     " iterations." );
-    }
-
+    }//end linearSearch method
 }//end class
