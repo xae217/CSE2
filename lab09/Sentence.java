@@ -4,7 +4,9 @@ public class Sentence{
     
     public static void main(String[] args) {
         
-    System.out.println(adjective());    
+    System.out.println("The " + adjective() + " " + adjective() + " " +
+        subjectNoun() + " " + verb() + " the " + adjective() + " " +  
+        subjectObject() + ".");    
     }
     
     public static String adjective() {
