@@ -10,7 +10,8 @@ public class Hell{
     public static void main(String[] args) {
         //create new scanner object
         Scanner myScanner = new Scanner(System.in);
-        
+        int x = 5/2;
+        System.out.println(x);
     }
 
 }//end class
