@@ -1,7 +1,7 @@
 // Xavier Escobar
-// April 21st, 2015
+// April 30th, 2015
 // CSE 002
-// Muliply.java calulates the product of 2 matrices.
+// FourDwin.java explores 4D arrays and sorting
 import java.util.Scanner;
 import java.util.Random;
 
