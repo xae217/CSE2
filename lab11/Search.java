@@ -78,8 +78,8 @@ public class Search{
         }
         
         if (found == 0){
-            System.out.println(array2[mid-1]);
-            System.out.println(array2[mid]);
+            System.out.println("Number above key: " + array2[mid-1]);
+            System.out.println("Number above key: " + array2[mid]);
         }
     }//end main method
 }//end class

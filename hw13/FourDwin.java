@@ -187,7 +187,7 @@ public class FourDwin{
         for (int i = 1; i < list.length; i++) {
             double[][][] currentElement = list[i];
              //shifts the 3D arrays   
-            for (x = i - 1; x >= 0 && count(list,x) > count(list,i); x--) {
+            for (x = i - 1; x >= 0 && count(list[x]) > count(currentElement); x--) {
                 list[x + 1] = list[x];
             } 
             //inserts the 3d array to its new position
@@ -196,14 +196,13 @@ public class FourDwin{
     }
 
     //create a method that counts the number of double in a 3D aray
-    public static int count(double[][][][] list, int x) {
+    public static int count(double[][][] list) {
         int count = 0;
-            for (int j=0; j < list[x].length; j++) {
-                for (int k=0; k < list[x][j].length; k++){
-                    count += list[x][j][k].length;
-                }
+        for (int j=0; j < list.length; j++) {
+            for (int k=0; k < list[j].length; k++){
+                count += list[j][k].length;
             }
-        //return count value
+        }
         return count;
     }
 }//end class
